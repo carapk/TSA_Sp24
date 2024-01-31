@@ -76,7 +76,7 @@ head(ts_energy_data)
 For each time series, i.e., Renewable Energy Production and Hydroelectric Consumption create three plots: one with time series, one with the ACF and with the PACF. You may use the some code form A2, but I want all the three plots side by side as in a grid.
 (Hint: use function `plot_grid()` from the `cowplot` package)
 
-```{r Time Series Plots}
+```{r Time Series Plots Initial}
 biomass_ts_plt <- autoplot(ts_energy_data[,1]) +
   labs(x="Year",y= "TBtu",
     title = "Biomass TS") 
@@ -94,7 +94,7 @@ hydro_ts_plt <- autoplot(ts_energy_data[,3]) +
 
 ```
 
-```{r Acf Plots}
+```{r Acf Plots observed}
 biomass_acf <- ggAcf(ts_energy_data[,1],lag.max=40)+
   labs(title="Biomass ACF")
 #biomass_acf
@@ -106,7 +106,7 @@ RE_acf <- ggAcf(ts_energy_data[,2],lag.max=40)+
 #RE_acf
 ```
 
-```{r Pacf Plots}
+```{r Pacf Plots observed}
 biomass_pacf <- ggPacf(ts_energy_data[,1],lag.max=40)+
   labs(title="Biomass PACF")
 #biomass_pacf
@@ -118,7 +118,7 @@ RE_pacf <- ggPacf(ts_energy_data[,2],lag.max=40)+
 #RE_pacf
 ```
 
-```{r Putting them all together }
+```{r Putting them all together to compare observed data}
 #plot_grid(biomass_ts_plt,biomass_acf,biomass_pacf, align="h",label_size=8)
 #plot_grid(hydro_ts_plt,hydro_acf,hydro_pacf, align = "h", label_size=8)
 #plot_grid(RE_ts_plt,RE_acf,RE_pacf,align="h",label_size=8)
@@ -250,7 +250,7 @@ RE_detrend_pacf <- ggPacf(ts_RE_detrend,lag.max=40)+
 #RE_detrend_pacf
 ```
 
-```{r Plotted together to compare}
+```{r Plotted together to compare Detrend}
 plot_grid(biomass_detrend_acf,biomass_detrend_pacf,biomass_acf,biomass_pacf,
           ncol=2,align="h")
 plot_grid(hydro_detrend_acf,hydro_detrend_pacf ,hydro_acf,hydro_pacf,
@@ -445,7 +445,7 @@ RE_deseason_pacf <- ggPacf(ts_RE_deseason,lag.max=40)+
 
 ```
 
-```{r Plotted together to compare}
+```{r Plotted together to compare Deseason}
 plot_grid(biomass_deseason_acf,biomass_deseason_pacf,biomass_acf,biomass_pacf,
           ncol=2,align="h")
 plot_grid(hydro_deseason_acf,hydro_deseason_pacf ,hydro_acf,hydro_pacf,
