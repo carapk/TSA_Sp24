@@ -127,7 +127,7 @@ ggAcf(diff(ts_RE_data,lag=1, differences=1))
 The differenced method was more efficiency in eliminating the trend. This is because the linear regression shows some changes in the temporal dependency, however this is most heavily eliminated in the differenced ACF as seen by the much lower values for correlation. 
 
 ### Q5
-Compute the Seasonal Mann-Kendall and ADF Test for the original "Total Renewable Energy Production" series. Ask R to print the results. Interpret the results for both test. What is the conclusion from the Seasonal Mann Kendall test? What's the conclusion for the ADF test? Do they match what you observed in Q2? Recall that having a unit root means the series has a stochastic trend. And when a series has stochastic trend we need to use a different procedure to remove the trend.
+Compute the Seasonal Mann-Kendall and ADF Test for the original "Total Renewable Energy Production" series. Ask R to print the results. Interpret the results for both test. What is the conclusion from the Seasonal Mann Kendall test? What's the conclusion for the ADF test? Do they match what you observed in Q3 plot? Recall that having a unit root means the series has a stochastic trend. And when a series has stochastic trend we need to use a different procedure to remove the trend.
 
 ```{r}
 print(SeasonalMannKendall(ts_RE_data))
