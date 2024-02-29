@@ -1,0 +1,231 @@
+---
+title: "ENV 797 - Time Series Analysis for Energy and Environment Applications | Spring 2024"
+subtitle: "Assignment 6 - Due date 02/28/24"
+author: "Student Name"
+output: pdf_document
+geometry: margin=2.54cm
+---
+
+```{r}
+#Load/install required package here
+library(ggplot2)
+library(forecast)
+library(tseries)
+#install.packages(sarima)
+#library(sarima)
+library(cowplot)
+
+```
+
+This assignment has general questions about ARIMA Models.
+
+## Q1
+
+Describe the important characteristics of the sample autocorrelation function (ACF) plot and the partial sample autocorrelation function (PACF) plot for the following models:
+
+-   AR
+
+> Answer:For AR models the ACF will decay exponentially with time, and the PACF will identify the order of the AR model.
+
+-   MA
+
+> Answer: For MA models the ACF will identify the order of the MA model and the PACF will decay exponentially.
+
+## Q2
+
+Recall that the non-seasonal ARIMA is described by three parameters ARIMA where p is the order of the autoregressive component, d is the number of times the series need to be differenced to obtain stationarity and q is the order of the moving average component. If we don't need to difference the series, we don't need to specify the "I" part and we can use the short version, i.e., the ARMA
+
+(a) Consider three models: ARMA(1,0), ARMA(0,1) and ARMA(1,1) with parameters phi=0.6 and theta= 0.9. The phi refers to the AR coefficient and the theta refers to the MA coefficient. Use the `arima.sim()` function in R to generate n=100 observations from each of these three models. Then, using `autoplot()` plot the generated series in three separate graphs.
+
+```{r}
+phi <- 0.6
+theta <- 0.9
+n <- 100
+
+# Generate data for ARMA(1,0)
+arma_10 <- arima.sim(model = list(order = c(1, 0, 0), ar = phi), n = n)
+
+# Generate data for ARMA(0,1)
+arma_01 <- arima.sim(model = list(order = c(0, 0, 1), ma = theta), n = n)
+
+# Generate data for ARMA(1,1)
+arma_11 <- arima.sim(model = list(order = c(1, 0, 1), ar = phi, ma = theta), n = n)
+
+# Plot the generated series using autoplot()
+autoplot(arma_10, main = "ARMA(1,0) Simulation") 
+
+autoplot(arma_01, main = "ARMA(0,1) Simulation") 
+
+autoplot(arma_11, main = "ARMA(1,1) Simulation") 
+
+```
+
+(b) Plot the sample ACF for each of these models in one window to facilitate comparison (Hint: use `cowplot::plot_grid()`).
+
+```{r}
+# Calculate and plot ACF for ARMA(1,0)
+acf_arma_10 <- acf(arma_10, main = "ACF for ARMA(1,0)")
+
+# Calculate and plot ACF for ARMA(0,1)
+acf_arma_01 <- acf(arma_01, main = "ACF for ARMA(0,1)")
+
+# Calculate and plot ACF for ARMA(1,1)
+acf_arma_11 <- acf(arma_11, main = "ACF for ARMA(1,1)")
+
+# Create a grid of ACF plots using cowplot::plot_grid()
+# cowplot::plot_grid(acf_arma_10, acf_arma_01, acf_arma_11, ncol = 3)
+
+#plot_grid(plotlist= autoplot(acf(arma_10, main = "ACF for ARMA(1,0)"), autoplot(acf(arma_01, main = "ACF for ARMA(0,1)"),autoplot(acf(arma_11, main = "ACF for ARMA(1,1)")
+
+
+```
+
+(c) Plot the sample PACF for each of these models in one window to facilitate comparison.
+
+```{r}
+# Calculate and plot PACF for ARMA(1,0)
+pacf_arma_10 <- pacf(arma_10, main = "PACF for ARMA(1,0)")
+
+# Calculate and plot PACF for ARMA(0,1)
+pacf_arma_01 <- pacf(arma_01, main = "PACF for ARMA(0,1)")
+
+# Calculate and plot PACF for ARMA(1,1)
+pacf_arma_11 <- pacf(arma_11, main = "PACF for ARMA(1,1)")
+
+# Create a grid of PACF plots using cowplot::plot_grid()
+#pacf_grid <- plot_grid(pacf_arma_10, pacf_arma_01, pacf_arma_11, ncol = 3)
+
+# Display the grid
+#print(pacf_grid)
+```
+
+(d) Look at the ACFs and PACFs. Imagine you had these plots for a data set and you were asked to identify the model, i.e., is it AR, MA or ARMA and the order of each component. Would you be able identify them correctly? Explain your answer.
+
+> Answer: The ARMA(1,0) model appears to have exponential decay in the ACF and a significant spike at lag 1. This would Indicate an autoregressive process with an order of 1. The ARMA 0,1 acf has a significant spike at lag 1 and a pacf with exponential decay. This could be identified as a moving average process with an order of 1. For the ARMA 1,1 model, it has exponential decay in both its acf and pacf, with would make it challenging to identify them correctly because it could indicate a a AR or MA process with orders 1. However, oftentines interpreting these graphs can be a challenge so I may not necessarily be able to identify the model order correctly as if I did not know the information about the models I expect to see.
+
+(e) Compare the PACF values R computed with the values you provided for the lag 1 correlation coefficient, i.e., does phi=0.6 match what you see on PACF for ARMA(1,0), and ARMA(1,1)? Should they match?
+
+> Answer: For ARMA(1,0), representing only an autoregressive (AR) component, the PACF at lag 1 is expected to closely match phi = 0.6, indicating the influence of the AR component.
+
+In ARMA(1,1), combining autoregressive (AR) and moving average (MA) components, the PACF at lag 1 should also reflect phi = 0.6. However, at lag 2, it reveals the combined effect of AR and MA coefficients. For ARMA(0,1), with only a moving average (MA) component, the PACF at lag 1 is anticipated to align with the specified MA coefficient (theta = 0.9). Overall, observed PACF values aligning with the specified AR and MA coefficients validate that the simulated data adheres to the anticipated autoregressive and moving average behaviors in the respective ARMA models.
+
+(f) Increase number of observations to n=1000 and repeat parts (b)-(e).
+
+```{r}
+# Increase number of observations
+n <- 1000
+
+# (b) Generate data for ARMA(1,0)
+arma_10_large <- arima.sim(model = list(order = c(1, 0, 0), ar = phi), n = n)
+
+# (c) Generate data for ARMA(0,1)
+arma_01_large <- arima.sim(model = list(order = c(0, 0, 1), ma = theta), n = n)
+
+# (d) Generate data for ARMA(1,1)
+arma_11_large <- arima.sim(model = list(order = c(1, 0, 1), ar = phi, ma = theta), n = n)
+
+# (e) PACF analysis
+pacf_arma_10_large <- pacf(arma_10_large, main = "PACF for ARMA(1,0) - n=1000")
+pacf_arma_01_large <- pacf(arma_01_large, main = "PACF for ARMA(0,1) - n=1000")
+pacf_arma_11_large <- pacf(arma_11_large, main = "PACF for ARMA(1,1) - n=1000")
+
+# Display the plots
+print(pacf_arma_10_large)
+print(pacf_arma_01_large)
+print(pacf_arma_11_large)
+```
+
+ARMA(1,0) - Autoregressive (AR) Model
+
+ACF:
+
+The ACF may show exponential decay, with decreasing correlations as the lag increases. A significant spike at lag 1 indicates the presence of the autoregressive term.
+
+PACF:
+
+The PACF at lag 1 should be close to the specified autoregressive coefficient (phi = 0.6) due to the absence of a moving average component.
+
+ARMA(0,1) - Moving Average (MA) Model
+
+ACF:
+
+A significant spike at lag 1 indicates the presence of the moving average term. Exponential decay in the ACF may be observed.
+
+PACF:
+
+The PACF should show a sharp cutoff after lag 1, representing the effect of the moving average term. ARMA(1,1) - Autoregressive Moving Average (ARMA) Model
+
+ACF:
+
+Exponential decay may be observed, indicating the presence of both AR and MA components. A significant spike at lag 1 may indicate the autoregressive term.
+
+PACF:
+
+The PACF at lag 1 reflects the autoregressive coefficient. The PACF at lag 2 may indicate the combined effect of AR and MA coefficients.
+
+In summary, the ACF and PACF plots for each model provide insights into the presence and behavior of autoregressive and moving average components, guiding the identification of the underlying ARMA structure in the time series data.
+
+## Q3
+
+(a) Identify the model using the notation ARIMA notation i.e., identify the integers from the equation.
+
+p: AR determined by lag of highest dependent variable = 1 d: differencing order to achieve stationarity-- 0 since there is no differencing q: MA determined by highest lag of MA term, = 1
+
+Seasonal: P: seasonal AR = 1, D: Seasonal differencing, D=0 since no seasonal differencing Q: Seasonal MA = 0 since no seasonal moving avg term
+
+s: seasonal period, s=12 
+
+ARIMA(1, 0, 1)(1, 0, 0)12
+
+(b) Also from the equation what are the values of the parameters, i.e., model coefficients.
+
+The coefficients in the equation represent the values of the parameters:
+
+Autoregressive (AR) coefficients: 0.7
+
+Moving Average (MA) coefficients: −0.1
+
+Seasonal Autoregressive (SAR) coefficients: −0.25
+
+Seasonal Moving Average (SMA) coefficients: none
+
+Constant term: None.
+
+Therefore, the values of the parameters are:
+
+AR(1): 0.7 MA(1): -0.1 SAR(1): -0.25 In summary, the identified ARIMA model is ARIMA(1, 0, 1)(1, 0, 0)12 with the corresponding parameter values.
+
+## Q4
+
+Simulate a seasonal ARIMA(0, 1) model with phi =0 .8 and theta = 0.5 using the `sim_sarima()` function from package `sarima`. 
+
+```{r}
+phi <- 0.8
+theta <- 0.5
+
+# Create SARIMA model
+sarima_model <- list(order = c(0, 1, 0), seasonal = list(order = c(1, 0, 0), period = 12), phi = phi, theta = theta)
+#sarima_model <- as.ts(sarima_model)
+
+# Plot the generated series using autoplot()
+#autoplot(sarima_model)
+
+
+```
+
+It would look seasonal if it had regular variations, but I cannot see the plot due to an error. 
+## Q5
+
+Plot ACF and PACF of the simulated series in Q4. Comment if the plots are well representing the model you simulated, i.e., would you be able to identify the order of both non-seasonal and seasonal components from the plots? Explain.
+
+```{r}
+# Calculate and plot ACF and PACF for the simulated series with greater n
+#acf_simulated_large <- acf(sarima_model, main = "ACF of Simulated Series (n=1000)")
+#pacf_simulated_large <- pacf(sarima_model, main = "PACF of Simulated Series (n=1000)")
+
+# Display the plots
+#print(acf_simulated_large)
+#print(pacf_simulated_large)
+```
+
+Given the plots that should be outputted if I could get this to run properly, I should be able to understand waht is simulated given the decay of the lags and the impact at the seasonal intervals.
