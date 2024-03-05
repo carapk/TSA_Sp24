@@ -1,0 +1,617 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=2.54cm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={ENV 797 - Time Series Analysis for Energy and Environment Applications \textbar{} Spring 2024},
+  pdfauthor={Student Name},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{ENV 797 - Time Series Analysis for Energy and Environment
+Applications \textbar{} Spring 2024}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Assignment 6 - Due date 02/28/24}
+\author{Student Name}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Load/install required package here}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(forecast)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Registered S3 method overwritten by 'quantmod':
+##   method            from
+##   as.zoo.data.frame zoo
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tseries)}
+\CommentTok{\#install.packages(sarima)}
+\CommentTok{\#library(sarima)}
+\FunctionTok{library}\NormalTok{(cowplot)}
+\end{Highlighting}
+\end{Shaded}
+
+This assignment has general questions about ARIMA Models.
+
+\hypertarget{q1}{%
+\subsection{Q1}\label{q1}}
+
+Describe the important characteristics of the sample autocorrelation
+function (ACF) plot and the partial sample autocorrelation function
+(PACF) plot for the following models:
+
+\begin{itemize}
+\tightlist
+\item
+  AR
+\end{itemize}
+
+\begin{quote}
+Answer:For AR models the ACF will decay exponentially with time, and the
+PACF will identify the order of the AR model.
+\end{quote}
+
+\begin{itemize}
+\tightlist
+\item
+  MA
+\end{itemize}
+
+\begin{quote}
+Answer: For MA models the ACF will identify the order of the MA model
+and the PACF will decay exponentially.
+\end{quote}
+
+\hypertarget{q2}{%
+\subsection{Q2}\label{q2}}
+
+Recall that the non-seasonal ARIMA is described by three parameters
+ARIMA where p is the order of the autoregressive component, d is the
+number of times the series need to be differenced to obtain stationarity
+and q is the order of the moving average component. If we don't need to
+difference the series, we don't need to specify the ``I'' part and we
+can use the short version, i.e., the ARMA
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Consider three models: ARMA(1,0), ARMA(0,1) and ARMA(1,1) with
+  parameters phi=0.6 and theta= 0.9. The phi refers to the AR
+  coefficient and the theta refers to the MA coefficient. Use the
+  \texttt{arima.sim()} function in R to generate n=100 observations from
+  each of these three models. Then, using \texttt{autoplot()} plot the
+  generated series in three separate graphs.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{phi }\OtherTok{\textless{}{-}} \FloatTok{0.6}
+\NormalTok{theta }\OtherTok{\textless{}{-}} \FloatTok{0.9}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{100}
+
+\CommentTok{\# Generate data for ARMA(1,0)}
+\NormalTok{arma\_10 }\OtherTok{\textless{}{-}} \FunctionTok{arima.sim}\NormalTok{(}\AttributeTok{model =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{), }\AttributeTok{ar =}\NormalTok{ phi), }\AttributeTok{n =}\NormalTok{ n)}
+
+\CommentTok{\# Generate data for ARMA(0,1)}
+\NormalTok{arma\_01 }\OtherTok{\textless{}{-}} \FunctionTok{arima.sim}\NormalTok{(}\AttributeTok{model =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{), }\AttributeTok{ma =}\NormalTok{ theta), }\AttributeTok{n =}\NormalTok{ n)}
+
+\CommentTok{\# Generate data for ARMA(1,1)}
+\NormalTok{arma\_11 }\OtherTok{\textless{}{-}} \FunctionTok{arima.sim}\NormalTok{(}\AttributeTok{model =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{), }\AttributeTok{ar =}\NormalTok{ phi, }\AttributeTok{ma =}\NormalTok{ theta), }\AttributeTok{n =}\NormalTok{ n)}
+
+\CommentTok{\# Plot the generated series using autoplot()}
+\FunctionTok{autoplot}\NormalTok{(arma\_10, }\AttributeTok{main =} \StringTok{"ARMA(1,0) Simulation"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{autoplot}\NormalTok{(arma\_01, }\AttributeTok{main =} \StringTok{"ARMA(0,1) Simulation"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{autoplot}\NormalTok{(arma\_11, }\AttributeTok{main =} \StringTok{"ARMA(1,1) Simulation"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Plot the sample ACF for each of these models in one window to
+  facilitate comparison (Hint: use \texttt{cowplot::plot\_grid()}).
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot ACF for ARMA(1,0)}
+\NormalTok{acf\_arma\_10 }\OtherTok{\textless{}{-}} \FunctionTok{acf}\NormalTok{(arma\_10, }\AttributeTok{main =} \StringTok{"ACF for ARMA(1,0)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot ACF for ARMA(0,1)}
+\NormalTok{acf\_arma\_01 }\OtherTok{\textless{}{-}} \FunctionTok{acf}\NormalTok{(arma\_01, }\AttributeTok{main =} \StringTok{"ACF for ARMA(0,1)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot ACF for ARMA(1,1)}
+\NormalTok{acf\_arma\_11 }\OtherTok{\textless{}{-}} \FunctionTok{acf}\NormalTok{(arma\_11, }\AttributeTok{main =} \StringTok{"ACF for ARMA(1,1)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Create a grid of ACF plots using cowplot::plot\_grid()}
+\CommentTok{\# cowplot::plot\_grid(acf\_arma\_10, acf\_arma\_01, acf\_arma\_11, ncol = 3)}
+
+\CommentTok{\#plot\_grid(plotlist= autoplot(acf(arma\_10, main = "ACF for ARMA(1,0)"), autoplot(acf(arma\_01, main = "ACF for ARMA(0,1)"),autoplot(acf(arma\_11, main = "ACF for ARMA(1,1)")}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Plot the sample PACF for each of these models in one window to
+  facilitate comparison.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot PACF for ARMA(1,0)}
+\NormalTok{pacf\_arma\_10 }\OtherTok{\textless{}{-}} \FunctionTok{pacf}\NormalTok{(arma\_10, }\AttributeTok{main =} \StringTok{"PACF for ARMA(1,0)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot PACF for ARMA(0,1)}
+\NormalTok{pacf\_arma\_01 }\OtherTok{\textless{}{-}} \FunctionTok{pacf}\NormalTok{(arma\_01, }\AttributeTok{main =} \StringTok{"PACF for ARMA(0,1)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot PACF for ARMA(1,1)}
+\NormalTok{pacf\_arma\_11 }\OtherTok{\textless{}{-}} \FunctionTok{pacf}\NormalTok{(arma\_11, }\AttributeTok{main =} \StringTok{"PACF for ARMA(1,1)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Create a grid of PACF plots using cowplot::plot\_grid()}
+\CommentTok{\#pacf\_grid \textless{}{-} plot\_grid(pacf\_arma\_10, pacf\_arma\_01, pacf\_arma\_11, ncol = 3)}
+
+\CommentTok{\# Display the grid}
+\CommentTok{\#print(pacf\_grid)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Look at the ACFs and PACFs. Imagine you had these plots for a data set
+  and you were asked to identify the model, i.e., is it AR, MA or ARMA
+  and the order of each component. Would you be able identify them
+  correctly? Explain your answer.
+\end{enumerate}
+
+\begin{quote}
+Answer: The ARMA(1,0) model appears to have exponential decay in the ACF
+and a significant spike at lag 1. This would Indicate an autoregressive
+process with an order of 1. The ARMA 0,1 acf has a significant spike at
+lag 1 and a pacf with exponential decay. This could be identified as a
+moving average process with an order of 1. For the ARMA 1,1 model, it
+has exponential decay in both its acf and pacf, with would make it
+challenging to identify them correctly because it could indicate a a AR
+or MA process with orders 1. However, oftentines interpreting these
+graphs can be a challenge so I may not necessarily be able to identify
+the model order correctly as if I did not know the information about the
+models I expect to see.
+\end{quote}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Compare the PACF values R computed with the values you provided for
+  the lag 1 correlation coefficient, i.e., does phi=0.6 match what you
+  see on PACF for ARMA(1,0), and ARMA(1,1)? Should they match?
+\end{enumerate}
+
+\begin{quote}
+Answer: For ARMA(1,0), representing only an autoregressive (AR)
+component, the PACF at lag 1 is expected to closely match phi = 0.6,
+indicating the influence of the AR component.
+\end{quote}
+
+In ARMA(1,1), combining autoregressive (AR) and moving average (MA)
+components, the PACF at lag 1 should also reflect phi = 0.6. However, at
+lag 2, it reveals the combined effect of AR and MA coefficients. For
+ARMA(0,1), with only a moving average (MA) component, the PACF at lag 1
+is anticipated to align with the specified MA coefficient (theta = 0.9).
+Overall, observed PACF values aligning with the specified AR and MA
+coefficients validate that the simulated data adheres to the anticipated
+autoregressive and moving average behaviors in the respective ARMA
+models.
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Increase number of observations to n=1000 and repeat parts (b)-(e).
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Increase number of observations}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{1000}
+
+\CommentTok{\# (b) Generate data for ARMA(1,0)}
+\NormalTok{arma\_10\_large }\OtherTok{\textless{}{-}} \FunctionTok{arima.sim}\NormalTok{(}\AttributeTok{model =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{), }\AttributeTok{ar =}\NormalTok{ phi), }\AttributeTok{n =}\NormalTok{ n)}
+
+\CommentTok{\# (c) Generate data for ARMA(0,1)}
+\NormalTok{arma\_01\_large }\OtherTok{\textless{}{-}} \FunctionTok{arima.sim}\NormalTok{(}\AttributeTok{model =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{), }\AttributeTok{ma =}\NormalTok{ theta), }\AttributeTok{n =}\NormalTok{ n)}
+
+\CommentTok{\# (d) Generate data for ARMA(1,1)}
+\NormalTok{arma\_11\_large }\OtherTok{\textless{}{-}} \FunctionTok{arima.sim}\NormalTok{(}\AttributeTok{model =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{), }\AttributeTok{ar =}\NormalTok{ phi, }\AttributeTok{ma =}\NormalTok{ theta), }\AttributeTok{n =}\NormalTok{ n)}
+
+\CommentTok{\# (e) PACF analysis}
+\NormalTok{pacf\_arma\_10\_large }\OtherTok{\textless{}{-}} \FunctionTok{pacf}\NormalTok{(arma\_10\_large, }\AttributeTok{main =} \StringTok{"PACF for ARMA(1,0) {-} n=1000"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pacf\_arma\_01\_large }\OtherTok{\textless{}{-}} \FunctionTok{pacf}\NormalTok{(arma\_01\_large, }\AttributeTok{main =} \StringTok{"PACF for ARMA(0,1) {-} n=1000"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pacf\_arma\_11\_large }\OtherTok{\textless{}{-}} \FunctionTok{pacf}\NormalTok{(arma\_11\_large, }\AttributeTok{main =} \StringTok{"PACF for ARMA(1,1) {-} n=1000"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Display the plots}
+\FunctionTok{print}\NormalTok{(pacf\_arma\_10\_large)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Partial autocorrelations of series 'arma_10_large', by lag
+## 
+##      1      2      3      4      5      6      7      8      9     10     11 
+##  0.571 -0.005  0.040 -0.004  0.035 -0.024 -0.010  0.001  0.066 -0.025 -0.002 
+##     12     13     14     15     16     17     18     19     20     21     22 
+## -0.023  0.010  0.007 -0.002 -0.057  0.038 -0.032 -0.003 -0.002 -0.004  0.005 
+##     23     24     25     26     27     28     29     30 
+## -0.006  0.012 -0.033  0.008  0.061 -0.026  0.017 -0.036
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(pacf\_arma\_01\_large)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Partial autocorrelations of series 'arma_01_large', by lag
+## 
+##      1      2      3      4      5      6      7      8      9     10     11 
+##  0.486 -0.306  0.210 -0.217  0.161 -0.145  0.110 -0.125  0.075 -0.139  0.064 
+##     12     13     14     15     16     17     18     19     20     21     22 
+## -0.102  0.035 -0.032  0.080 -0.004  0.064 -0.060  0.056 -0.031 -0.035 -0.044 
+##     23     24     25     26     27     28     29     30 
+## -0.028  0.013  0.024 -0.004  0.024  0.028  0.011 -0.033
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(pacf\_arma\_11\_large)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Partial autocorrelations of series 'arma_11_large', by lag
+## 
+##      1      2      3      4      5      6      7      8      9     10     11 
+##  0.805 -0.450  0.320 -0.270  0.163 -0.100  0.099 -0.119  0.121 -0.135  0.099 
+##     12     13     14     15     16     17     18     19     20     21     22 
+## -0.047  0.076 -0.075  0.070  0.008 -0.020  0.055  0.034 -0.020 -0.015 -0.022 
+##     23     24     25     26     27     28     29     30 
+##  0.014 -0.012  0.022  0.032  0.000  0.042 -0.036 -0.022
+\end{verbatim}
+
+ARMA(1,0) - Autoregressive (AR) Model
+
+ACF:
+
+The ACF may show exponential decay, with decreasing correlations as the
+lag increases. A significant spike at lag 1 indicates the presence of
+the autoregressive term.
+
+PACF:
+
+The PACF at lag 1 should be close to the specified autoregressive
+coefficient (phi = 0.6) due to the absence of a moving average
+component.
+
+ARMA(0,1) - Moving Average (MA) Model
+
+ACF:
+
+A significant spike at lag 1 indicates the presence of the moving
+average term. Exponential decay in the ACF may be observed.
+
+PACF:
+
+The PACF should show a sharp cutoff after lag 1, representing the effect
+of the moving average term. ARMA(1,1) - Autoregressive Moving Average
+(ARMA) Model
+
+ACF:
+
+Exponential decay may be observed, indicating the presence of both AR
+and MA components. A significant spike at lag 1 may indicate the
+autoregressive term.
+
+PACF:
+
+The PACF at lag 1 reflects the autoregressive coefficient. The PACF at
+lag 2 may indicate the combined effect of AR and MA coefficients.
+
+In summary, the ACF and PACF plots for each model provide insights into
+the presence and behavior of autoregressive and moving average
+components, guiding the identification of the underlying ARMA structure
+in the time series data.
+
+\hypertarget{q3}{%
+\subsection{Q3}\label{q3}}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\tightlist
+\item
+  Identify the model using the notation ARIMA notation i.e., identify
+  the integers from the equation.
+\end{enumerate}
+
+p: AR determined by lag of highest dependent variable = 1 d:
+differencing order to achieve stationarity-- 0 since there is no
+differencing q: MA determined by highest lag of MA term, = 1
+
+Seasonal: P: seasonal AR = 1, D: Seasonal differencing, D=0 since no
+seasonal differencing Q: Seasonal MA = 0 since no seasonal moving avg
+term
+
+s: seasonal period, s=12
+
+ARIMA(1, 0, 1)(1, 0, 0)12
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Also from the equation what are the values of the parameters, i.e.,
+  model coefficients.
+\end{enumerate}
+
+The coefficients in the equation represent the values of the parameters:
+
+Autoregressive (AR) coefficients: 0.7
+
+Moving Average (MA) coefficients: −0.1
+
+Seasonal Autoregressive (SAR) coefficients: −0.25
+
+Seasonal Moving Average (SMA) coefficients: none
+
+Constant term: None.
+
+Therefore, the values of the parameters are:
+
+AR(1): 0.7 MA(1): -0.1 SAR(1): -0.25 In summary, the identified ARIMA
+model is ARIMA(1, 0, 1)(1, 0, 0)12 with the corresponding parameter
+values.
+
+\hypertarget{q4}{%
+\subsection{Q4}\label{q4}}
+
+Simulate a seasonal ARIMA(0, 1) model with phi =0 .8 and theta = 0.5
+using the \texttt{sim\_sarima()} function from package \texttt{sarima}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{phi }\OtherTok{\textless{}{-}} \FloatTok{0.8}
+\NormalTok{theta }\OtherTok{\textless{}{-}} \FloatTok{0.5}
+
+\CommentTok{\# Create SARIMA model}
+\NormalTok{sarima\_model }\OtherTok{\textless{}{-}} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{), }\AttributeTok{seasonal =} \FunctionTok{list}\NormalTok{(}\AttributeTok{order =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{), }\AttributeTok{period =} \DecValTok{12}\NormalTok{), }\AttributeTok{phi =}\NormalTok{ phi, }\AttributeTok{theta =}\NormalTok{ theta)}
+\CommentTok{\#sarima\_model \textless{}{-} as.ts(sarima\_model)}
+
+\CommentTok{\# Plot the generated series using autoplot()}
+\CommentTok{\#autoplot(sarima\_model)}
+\end{Highlighting}
+\end{Shaded}
+
+It would look seasonal if it had regular variations, but I cannot see
+the plot due to an error. \#\# Q5
+
+Plot ACF and PACF of the simulated series in Q4. Comment if the plots
+are well representing the model you simulated, i.e., would you be able
+to identify the order of both non-seasonal and seasonal components from
+the plots? Explain.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate and plot ACF and PACF for the simulated series with greater n}
+\CommentTok{\#acf\_simulated\_large \textless{}{-} acf(sarima\_model, main = "ACF of Simulated Series (n=1000)")}
+\CommentTok{\#pacf\_simulated\_large \textless{}{-} pacf(sarima\_model, main = "PACF of Simulated Series (n=1000)")}
+
+\CommentTok{\# Display the plots}
+\CommentTok{\#print(acf\_simulated\_large)}
+\CommentTok{\#print(pacf\_simulated\_large)}
+\end{Highlighting}
+\end{Shaded}
+
+Given the plots that should be outputted if I could get this to run
+properly, I should be able to understand waht is simulated given the
+decay of the lags and the impact at the seasonal intervals.
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.6)  28 FEB 2024 22:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.6)  28 FEB 2024 22:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -415,89 +415,88 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 123.
 (/Users/cara/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 149.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 125.
 (/Users/cara/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 151.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 183.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 127.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 159.
 (/Users/cara/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {/Users/cara/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/cara/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/cara/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf, id=36, 469.755pt x 325.215pt>
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf, id=31, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 244.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 220.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[2]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf, id=43, 469.755pt x 325.215pt>
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf, id=32, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf  used on input line 252.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf  used on input line 228.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[3 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf, id=53, 469.755pt x 325.215pt>
+[2 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-1.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf, id=43, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf  used on input line 260.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf  used on input line 236.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[4 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf, id=63, 469.755pt x 325.215pt>
+[3 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-2.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf, id=53, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 278.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 254.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[5 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf, id=74, 469.755pt x 325.215pt>
+[4 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-2-3.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf, id=64, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf  used on input line 287.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf  used on input line 263.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[6 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf, id=85, 469.755pt x 325.215pt>
+[5 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf, id=75, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf  used on input line 296.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf  used on input line 272.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[7 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf, id=97, 469.755pt x 325.215pt>
+[6 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-2.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf, id=86, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 323.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 299.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[8 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf, id=109, 469.755pt x 325.215pt>
+[7 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-3-3.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf, id=99, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf  used on input line 332.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf  used on input line 308.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[9 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf, id=120, 469.755pt x 325.215pt>
+[8 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-1.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf, id=110, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf  used on input line 341.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf  used on input line 317.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[10 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf>] [11 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf, id=143, 469.755pt x 325.215pt>
+[9 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-2.pdf>] [10 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-4-3.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf, id=133, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 431.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 407.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[12 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf>]
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf, id=156, 469.755pt x 325.215pt>
+[11 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-1.pdf>]
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf, id=145, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf  used on input line 439.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf  used on input line 415.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf, id=157, 469.755pt x 325.215pt>
+<Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf, id=146, 469.755pt x 325.215pt>
 File: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf Graphic file (type pdf)
 <use Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf>
-Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf  used on input line 447.
+Package pdftex.def Info: Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf  used on input line 423.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[13 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf>] [14 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf>] [15]
+[12 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-2.pdf>] [13 <./Kuuskvere_C_TSA_A06_Sp24_files/figure-latex/unnamed-chunk-5-3.pdf>] [14]
 
 ! LaTeX Error: Unicode character − (U+2212)
                not set up for use with LaTeX.
@@ -506,15 +505,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.584 Moving Average (MA) coefficients: −
+l.559 Moving Average (MA) coefficients: −
                                            0.1 
 Here is how much of TeX's memory you used:
- 11290 strings out of 476188
- 178277 string characters out of 5795084
+ 11283 strings out of 476188
+ 178203 string characters out of 5795084
  1935975 words of memory out of 5000000
- 33096 multiletter control sequences out of 15000+600000
- 587410 words of font info for 62 fonts, out of 8000000 for 9000
+ 33093 multiletter control sequences out of 15000+600000
+ 584415 words of font info for 61 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,6n,79p,446b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,446b,528s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 !  ==> Fatal error occurred, no output PDF file produced!
